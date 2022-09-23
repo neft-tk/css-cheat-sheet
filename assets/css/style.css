@@ -1,0 +1,79 @@
+/* css reset for the page */
+:root {
+  --firewall-dragon: 120deg, darkblue, silver;
+  --cool-shadow: 5px 5px 5px black;
+  --corn: cornflowerblue;
+  --ritual: aqua;
+  --darkhole: 2px solid black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.body {
+    font-family: sans-serif;
+    background-color: var(--corn);
+  }
+
+.body header h1, h2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main {
+  flex: 1;
+  background-color: var(--corn);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 5px;
+  flex: 1 1 300px;
+  /* transform: rotate(8deg); */
+  box-shadow: var(--cool-shadow);
+  margin: 20px;
+}
+
+.card h3 {
+  background-color: var(--corn);
+  border: var(--darkhole);
+  margin-top: -25px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.body header:hover, .card:hover, .card h3:hover, footer:hover {
+  background: linear-gradient(var(--firewall-dragon));
+  border: var(--darkhole);
+  box-shadow: var(--cool-shadow);
+  color: white;
+}
+
+.card:hover {  
+  /* transform: rotate(5deg); */
+  translate: -10px;
+}
+
+@media screen and (max-width: 992px) {
+  body header h1, h2 {
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 50%
+  }  
+}
